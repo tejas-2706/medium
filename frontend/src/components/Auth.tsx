@@ -13,9 +13,9 @@ export const Auth = ({ type }: { type: "Sign up" | "Sign in" }) => {
     })
     async function sendRequest() {
         try {
-            const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type == 'Sign up'? "signup":"signin"}`, userInputs);
+            const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type == 'Sign up' ? "signup" : "signin"}`, userInputs);
             const jwt = response.data.jwt;
-            localStorage.setItem("token","Bearer "+jwt);
+            localStorage.setItem("token", "Bearer " + jwt);
             navigate("/posts")
         } catch (error) {
             console.log(error);
@@ -24,19 +24,21 @@ export const Auth = ({ type }: { type: "Sign up" | "Sign in" }) => {
     }
     return <div className="">
         <div className="flex flex-col items-center justify-center min-h-screen ">
-            {type == "Sign up"? <div className="pr-10 text-3xl font-bold ">
-                Create an account
-            </div> : <div className="pr-10 text-3xl font-bold ">
-                Blogin your account
-            </div>}
             <div className="w-1/2">
-            {type == "Sign up" ? 
-                <LabelInput label="Name" placeholder="Tejas P" onChange={(e) => {
-                    setUserInputs({
-                        ...userInputs,
-                        name: e.target.value
-                    })
-                }} /> : null}
+                {type == "Sign up" ? <div className="md:pr-10 md:text-3xl font-bold ">
+                    Create an account
+                </div> : <div className="md:pr-10 md:text-3xl font-bold ">
+                    Blogin your account
+                </div>}
+            </div>
+            <div className="w-1/2">
+                {type == "Sign up" ?
+                    <LabelInput label="Name" placeholder="Tejas P" onChange={(e) => {
+                        setUserInputs({
+                            ...userInputs,
+                            name: e.target.value
+                        })
+                    }} /> : null}
                 <LabelInput label="Email" placeholder="tejas@gmail.com" onChange={(e) => {
                     setUserInputs({
                         ...userInputs,
@@ -49,17 +51,21 @@ export const Auth = ({ type }: { type: "Sign up" | "Sign in" }) => {
                         password: e.target.value
                     })
                 }} />
-                <div className="py-4 pr-20 flex justify-center">
-            <button onClick={sendRequest} type="button" className="w-1/3 py-1 text-white bg-black rounded-full juspx-4 py- 2 font-semi-bold hover:bg-slate-800">{type}</button>
+                <div className="py-4 flex justify-center">
+                    <button onClick={sendRequest} type="button" className="w-full py-1 text-white bg-black rounded-full px-4 py- 2 font-semi-bold hover:bg-slate-800">
+                        {type}
+                    </button>
                 </div>
             </div>
-            {type == "Sign up"? <div className="pr-10 text-slate-400">
-                Already have an account?
-                <Link className="text-blue-400 underline" to={'/signin'}> Login</Link>
-            </div> : <div className="pr-10 text-center text-slate-400">
-                Create an account?
-                <Link className="text-blue-400 underline" to={'/signup'}> Signup </Link>
-            </div>}
+            <div className="w-1/2">
+                {type == "Sign up" ? <div className="md:pr-10 text-slate-400">
+                    Already have an account?
+                    <Link className="text-blue-400 underline" to={'/signin'}>Login</Link>
+                </div> : <div className="md:pr-10 text-center text-slate-400">
+                    Create an account?
+                    <Link className="text-blue-400 underline" to={'/signup'}> Signup </Link>
+                </div>}
+            </div>
         </div>
     </div>
 }
