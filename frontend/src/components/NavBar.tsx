@@ -5,7 +5,10 @@ export const NavBar = () => {
     return <div className="flex border-b border-slate-200 justify-between p-4">
         <Link to={'/posts'}>
         <div className="text-4xl font-bold">
-            Blogers
+            <span className="flex justify-center items-center">
+            <img src="purple_blog.svg" height={53} width={53} alt=""/>
+             <h2 className="pb-2">Blogger</h2>
+            </span>
         </div>
         </Link>
         <div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" viewBox="0 0 512 512" id="blog">
+  <g fill="#000000" class="color000000 svgShape">
+    <polygon fill="#6366f1" points="372.5 35.3 80.6 35.3 80.6 415.4 169.8 415.4 226.6 476.7 283.3 415.4 372.5 415.4" class="colored237a svgShape"></polygon>
+    <g fill="#000000" class="color000000 svgShape">
+      <rect width="195.3" height="23.1" x="128.9" y="341.4" fill="#232461" class="color272361 svgShape"></rect>
+      <rect width="53.4" height="23.1" x="128.9" y="295" fill="#232461" class="color272361 svgShape"></rect>
+      <rect width="118" height="23.1" x="206.2" y="295" fill="#232461" class="color272361 svgShape"></rect>
+      <rect width="195.3" height="23.1" x="128.9" y="248.6" fill="#232461" class="color272361 svgShape"></rect>
+    </g>
+    <polygon fill="#f2f2f3" points="284.5 150.5 168.6 83.5 168.6 217.4" class="colorf3f2f3 svgShape"></polygon>
+    <polygon fill="#f2f2f3" points="431.4 377.3 418.5 401.3 410.6 415.9 402.7 401.3 389.8 377.3" class="colorf3f2f3 svgShape"></polygon>
+    <polygon fill="#232461" points="418.5 401.3 410.6 415.9 402.7 401.3" class="color272361 svgShape"></polygon>
+    <rect width="41.6" height="169.6" x="389.8" y="207.7" fill="#6366f1" class="color2ea9e0 svgShape"></rect>
+    <rect width="41.6" height="9.7" x="389.8" y="207.7" fill="#f2f2f3" class="colorf2f2f3 svgShape"></rect>
+    <rect width="41.6" height="31.6" x="389.8" y="176.1" fill="#3a3efb" class="colorfbb03a svgShape"></rect>
+  </g>
+</svg>
