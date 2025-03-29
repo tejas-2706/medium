@@ -14,6 +14,8 @@ export const Posts = () => {
             <PostSkeleton/>
             <PostSkeleton/>
             <PostSkeleton/>
+            <PostSkeleton/>
+            <PostSkeleton/>
         </div>
     }
     return <div>
