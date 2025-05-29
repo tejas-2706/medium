@@ -4,6 +4,8 @@
 //     "name":string | undefined;
 // }
 
+import MDEditor from "@uiw/react-md-editor";
+
 // export const PostDetails = ({title,content,name}:PostDetailsType) => {
 //     return <div>
 //         <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
@@ -52,7 +54,12 @@ export const PostDetails = ({ title, content, name }: PostDetailsType) => {
             {/* Post Content */}
             <div className="mb-8">
                 <p className="text-lg text-gray-700 tracking-wide leading-relaxed">
-                    {content || 'No content available.'}
+                    {content ? <MDEditor.Markdown source={content} 
+                    style={{
+                        backgroundColor:"white",
+                        color:"black"
+                    }}
+                    /> : 'No content available.'}
                 </p>
             </div>
 

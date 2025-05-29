@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar"
 import { BACKEND_URL } from "../config"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import BlogEditor from "../components/BlogEditor"
 export const Publish = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -23,10 +24,16 @@ export const Publish = () => {
                 <div className="w-full mb-4 rounded-lg bg-white px-4 py-2 ">
                     <div className=" bg-white rounded-t-lg border">
                         <label className="block mb-2 text-sm font-medium text-gray-900">Your Blog</label>
-                        <textarea onChange={(e) => {
+                        {/* <textarea onChange={(e) => {
                             setContent(e.target.value)
                         }}
-                            id="comment" rows={10} className="w-full px-0 text-sm text-gray-900 bg-white border-0 focus:ring-0 dark:placeholder-gray-400" placeholder="Write Your Blog..." required ></textarea>
+                            id="comment" rows={10} className="w-full px-0 text-sm text-gray-900 bg-white border-0 focus:ring-0 dark:placeholder-gray-400" placeholder="Write Your Blog..." required >
+
+                            </textarea> */}
+                        <BlogEditor 
+                        blogDescription={content}
+                        setBlogDescription={setContent}
+                        />
                     </div>
                     <div className="flex items-center justify-between px-3 py-2 border">
                         <button onClick={async () => {
